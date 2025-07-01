@@ -1,12 +1,62 @@
-# React + Vite
+# MERN Auth App - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for a MERN (MongoDB, Express, React, Node.js) Authentication System.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+client/
+├── src/
+│   ├── components/
+│   ├── context/
+│   └── pages/
+│       ├── EmailVerify.jsx
+│       ├── Home.jsx
+│       ├── Login.jsx
+│       └── ResetPassword.jsx
+├── package.json
+└── README.md
+```
 
-## Expanding the ESLint configuration
+### Folders
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **components/**: Reusable React components (e.g., buttons, forms).
+- **context/**: React context for global state management (e.g., authentication state).
+- **pages/**: Main application pages:
+    - `EmailVerify.jsx`: Email verification page.
+    - `Home.jsx`: Home page after login.
+    - `Login.jsx`: User login page.
+    - `ResetPassword.jsx`: Password reset page.
+
+## Getting Started
+
+1. Install dependencies:
+
+     ```bash
+     npm install
+     ```
+
+2. Start the development server:
+
+     ```bash
+     npm start
+     ```
+
+3. The app will run on [http://localhost:3000](http://localhost:3000).
+
+## Features
+
+- User authentication (login, registration, password reset)
+- Email verification
+- Protected routes
+
+## Tech Stack
+
+- React
+- Context API
+- Axios (for API requests)
+- React Router
+
+## License
+
+MIT
