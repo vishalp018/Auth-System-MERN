@@ -7,19 +7,20 @@ const authRouter =require("./routes/authRoutes")
 
 const cookieParser = require("cookie-parser");
 const { userRouter } = require("./routes/userRoutes");
-
 const app=express();
 const port=process.env.PORT||4000
 
+//Database connection
 connectDB();
 
+//Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials:true
 }))
 
-//API Endpoints
+//API Endpoints for testing
 app.get("/",(req,res)=>{
 res.send("API Working fine")
 })
